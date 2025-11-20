@@ -6,14 +6,9 @@ name: Node.js CI
 on:
   push:
     branches: [ "Fadi" ]
-    paths:
-      - 'frontend/**'
-      - '.github/workflows/node.js.yml'
   pull_request:
     branches: [ "Fadi" ]
-    paths:
-      - 'frontend/**'
-      - '.github/workflows/node.js.yml'
+
 
 
 
