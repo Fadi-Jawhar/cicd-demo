@@ -56,6 +56,20 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    
+
+
+    include:
+
+
+    paths:
+
+
+    - 'frontend/**'
+
+
+    - 'github/workflow/node.js.yaml'
+
 
 
     strategy:
