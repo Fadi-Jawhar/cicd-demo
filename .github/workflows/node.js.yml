@@ -43,10 +43,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     include:
-    paths:
-    - 'frontend/**'
-    - 'github/workflow/node.js.yaml'
-    strategy:
+      paths:
+      - 'frontend/**'
+      - 'github/workflow/node.js.yaml'
+      strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
 
