@@ -52,7 +52,12 @@ jobs:
       matrix:
         node-version: [18.x, 20.x, 22.x]
 
-    steps:
-      - uses: actions/checkout@v4
-      - run: npm ci
-      - run: npm test
+
+  defaults:
+      run:
+        working-directory: frontend
+
+  steps:
+     - uses: actions/checkout@v4
+     - run: npm ci
+     - run: npm test
