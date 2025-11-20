@@ -9,6 +9,8 @@ on:
   pull_request:
     branches: [ "Fadi" ]
 
+
+
 jobs:
   build:
 
@@ -18,6 +20,11 @@ jobs:
       matrix:
         node-version: [18.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    include:
+    paths:
+    - 'frontend/**'
+    - 'github/workflow/node.js.yaml'
 
     steps:
     - uses: actions/checkout@v4 
