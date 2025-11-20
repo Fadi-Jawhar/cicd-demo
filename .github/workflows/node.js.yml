@@ -31,26 +31,28 @@
 #     - uses: actions/checkout@v4 
 #     - run: npm ci
 #     - run: npm test
-
 name: Node.js CI
+
 on:
   push:
     branches: [ "Fadi" ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/node.js.yaml'
   pull_request:
     branches: [ "Fadi" ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/node.js.yaml'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    include:
-      paths:
-      - 'frontend/**'
-      - 'github/workflow/node.js.yaml'
-      strategy:
+    strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-    - uses: actions/checkout@v4 
-    - run: npm ci
-    - run: npm test
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm test
